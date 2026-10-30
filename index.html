@@ -1,86 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#123b78">
-<title>EarnBD Ads | Learn • Refer • Grow</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b6c3a">
+<title>EarnBD Ads — Member Portal</title>
 <style>
-:root{--navy:#123b78;--blue:#1765c1;--bg:#f3f6fb;--ink:#172033;--muted:#64748b;--line:#e3eaf4;--white:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans Bengali",Arial,sans-serif;line-height:1.55}
-header{background:linear-gradient(125deg,#102d5b,#1765c1);color:white;padding:22px 16px 30px}
-.wrap{max-width:1000px;margin:auto;padding:0 14px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-size:23px;font-weight:800;letter-spacing:.2px}.brand span{color:#9dd7ff}.pill{font-size:12px;background:#ffffff20;border:1px solid #ffffff55;padding:5px 10px;border-radius:30px}
-nav{display:flex;gap:8px;overflow:auto;padding:13px 0 0}nav a{color:white;text-decoration:none;white-space:nowrap;font-size:14px;padding:7px 11px;border-radius:8px}nav a:hover{background:#ffffff20}
-.hero{padding:28px 0 8px}.hero h1{font-size:clamp(26px,6vw,42px);line-height:1.18;margin:0 0 10px}.hero p{color:#e0edff;max-width:650px;margin:0 0 18px}.btn{display:inline-block;border:0;border-radius:10px;padding:11px 16px;background:var(--blue);color:white;font-weight:700;text-decoration:none;cursor:pointer}.btn.light{background:white;color:var(--navy)}.btn.ghost{background:#eaf2ff;color:var(--navy)}
-main{padding:20px 0 40px}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}.card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:17px;box-shadow:0 5px 18px #1c37600a}.span8{grid-column:span 8}.span4{grid-column:span 4}.span6{grid-column:span 6}.span12{grid-column:span 12}
-h2{font-size:20px;margin:0 0 10px;color:var(--navy)}h3{font-size:17px;margin:0 0 7px}.muted{color:var(--muted);font-size:14px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.stat{background:#f4f8ff;border-radius:12px;padding:12px}.stat b{display:block;font-size:21px;color:var(--navy)}.stat small{color:var(--muted)}
-.adbox{border:1px dashed #9aabc2;background:#f9fbff;border-radius:12px;min-height:105px;display:flex;align-items:center;justify-content:center;text-align:center;padding:14px;color:#718096;font-size:14px}
-.article{padding:13px 0;border-bottom:1px solid var(--line)}.article:last-child{border:0}.tag{display:inline-block;color:#1456a0;background:#eaf2ff;padding:3px 8px;border-radius:20px;font-size:11px;margin-bottom:6px}
-input{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:9px;font:inherit;background:white}label{font-size:13px;font-weight:700;display:block;margin:10px 0 5px}.copyrow{display:flex;gap:8px;margin-top:8px}.copyrow input{min-width:0}.notice{background:#fff8e6;border:1px solid #f2d99b;color:#75520a;padding:12px;border-radius:10px;font-size:13px}
-footer{background:#102d5b;color:#dbeafe;padding:24px 0;font-size:13px}footer a{color:white}
-.hidden{display:none}.small{font-size:12px}
-@media(max-width:700px){.span8,.span4,.span6{grid-column:span 12}.stats{grid-template-columns:1fr 1fr}.hero{padding-top:23px}}
-</style>
-</head>
+:root{--green:#08783d;--deep:#0b4e2c;--bg:#f3f7f4;--ink:#183629;--muted:#66786e;--line:#e3ebe5}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:system-ui,"Noto Sans Bengali",sans-serif;color:var(--ink)}
+header{background:linear-gradient(120deg,#084b2b,#0d8748);color:white;padding:17px 20px}
+.top{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center}.brand{font-weight:850;font-size:22px}.brand span{color:#a9efc5}
+.wrap{max-width:1100px;margin:24px auto;padding:0 16px}.hero{background:linear-gradient(120deg,#0c6035,#139451);color:#fff;padding:25px;border-radius:18px;margin-bottom:18px}.hero h1{margin:0 0 8px;font-size:clamp(24px,4vw,34px)}.hero p{margin:0;color:#e3f5e9;line-height:1.6}
+.layout{display:grid;grid-template-columns:220px 1fr;gap:18px}.side,.panel,.auth{background:white;border:1px solid var(--line);border-radius:16px;box-shadow:0 4px 18px #173b2510}
+.side{padding:12px;height:max-content}.navbtn{display:block;width:100%;text-align:left;background:transparent;color:var(--ink);margin:3px 0;padding:12px;border-radius:10px;font-size:15px}.navbtn.active{background:#e9f5ed;color:#096435;font-weight:800}
+.panel{padding:22px;min-height:330px}.panel h2{margin:0 0 8px}.muted{color:var(--muted);font-size:14px;line-height:1.6}.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}.tile{background:#f5f9f6;border:1px solid var(--line);border-radius:13px;padding:15px}.tile small{color:var(--muted)}.tile strong{display:block;font-size:22px;margin-top:5px}
+button{border:0;border-radius:10px;padding:12px 15px;background:var(--green);color:#fff;font-weight:750;font-size:15px;cursor:pointer}.secondary{background:#e9f5ed;color:#126238}.danger{background:#fff0ef;color:#a33127}.full{width:100%;margin-top:12px}
+label{display:block;font-weight:700;margin:12px 0 6px;font-size:14px}input{width:100%;padding:13px;border:1px solid #cad8ce;border-radius:10px;font-size:16px}
+.auth{max-width:500px;margin:35px auto;padding:22px}.tabs{display:flex;gap:8px;margin:14px 0}.tabs button{flex:1}.hidden{display:none!important}.status{background:#edf6ef;padding:11px;border-radius:10px;margin-top:12px;white-space:pre-wrap;font-size:14px}.code{background:#f2f7f3;border:1px dashed #bfd5c5;padding:12px;border-radius:10px;overflow-wrap:anywhere}
+.notice{background:#fff8e8;border:1px solid #f0dfb5;border-radius:12px;padding:13px;color:#72551b;font-size:13px;line-height:1.6;margin-top:16px}
+footer{text-align:center;color:var(--muted);font-size:12px;padding:22px}
+@media(max-width:720px){.layout{grid-template-columns:1fr}.side{display:grid;grid-template-columns:repeat(2,1fr)}.tiles{grid-template-columns:1fr}.panel{padding:17px}}
+</style></head>
 <body>
-<header id="home">
- <div class="wrap">
-  <div class="top"><div class="brand">EarnBD <span>Ads</span></div><div class="pill">বাংলা • English</div></div>
-  <nav><a href="#home">হোম</a><a href="#learn">আর্টিকেল</a><a href="#referral">রেফার</a><a href="#about">আমাদের সম্পর্কে</a><a href="#contact">যোগাযোগ</a></nav>
-  <section class="hero">
-   <h1>শিখুন, শেয়ার করুন,<br>একসঙ্গে এগিয়ে যান</h1>
-   <p>প্রযুক্তি, অনলাইন দক্ষতা ও ডিজিটাল নিরাপত্তা বিষয়ে সহজ বাংলা গাইড। প্রয়োজনীয় কনটেন্ট বন্ধুদের সঙ্গে শেয়ার করুন।</p>
-   <a class="btn light" href="#learn">আর্টিকেল পড়ুন</a>
-   <a class="btn ghost" href="#referral">রেফারেল দেখুন</a>
-  </section>
- </div>
-</header>
-<main class="wrap">
- <div class="grid">
-  <section class="card span8" id="learn">
-   <h2>সাম্প্রতিক আর্টিকেল</h2>
-   <div class="article"><span class="tag">ডিজিটাল দক্ষতা</span><h3>মোবাইল দিয়ে ওয়েবসাইট শেখা শুরু করবেন যেভাবে</h3><p class="muted">HTML, CSS ও JavaScript-এর প্রাথমিক ধারণা নিয়ে নিজের প্রথম ওয়েবপেজ তৈরি করুন।</p></div>
-   <div class="article"><span class="tag">নিরাপত্তা</span><h3>অনলাইনে ব্যক্তিগত তথ্য নিরাপদ রাখার ৫টি উপায়</h3><p class="muted">শক্তিশালী পাসওয়ার্ড, দুই-ধাপ যাচাইকরণ এবং সন্দেহজনক লিংক এড়িয়ে চলুন।</p></div>
-   <div class="article"><span class="tag">অনলাইন শিক্ষা</span><h3>নতুন দক্ষতা শেখার জন্য একটি সহজ পরিকল্পনা</h3><p class="muted">প্রতিদিন অল্প সময় অনুশীলন করে ধাপে ধাপে দক্ষতা বাড়ান।</p></div>
-  </section>
-  <aside class="card span4">
-   <h2>বিজ্ঞাপনের স্থান</h2>
-   <div class="adbox">এখানে অনুমোদিত বিজ্ঞাপন নেটওয়ার্কের বিজ্ঞাপন বসবে।<br><b>এখনো বিজ্ঞাপন চালু হয়নি</b></div>
-   <p class="muted small">বিজ্ঞাপন নেটওয়ার্কের অনুমোদন ও নীতিমালা মেনে বিজ্ঞাপন কোড যুক্ত করতে হবে।</p>
-  </aside>
-  <section class="card span12" id="referral">
-   <h2>রেফারেল প্রোগ্রাম</h2>
-   <p class="muted">বন্ধুদের সঙ্গে ওয়েবসাইট শেয়ার করুন। ভবিষ্যতে কোনো বৈধ পার্টনার/অ্যাফিলিয়েট প্রোগ্রাম চালু হলে তার প্রকাশিত শর্ত অনুযায়ী রেফারেল সুবিধা দেওয়া হবে।</p>
-   <div class="notice">এটি প্রাথমিক ডেমো। এই সংস্করণে সদস্য অ্যাকাউন্ট, কমিশন গণনা বা টাকা উত্তোলন চালু নেই। শুধু URL-এ থাকা রেফারেল কোডটি দেখানো হয়; এটি সার্ভারে সংরক্ষিত বা যাচাইকৃত নয়।</div>
-   <label for="refcode">আপনার ডেমো রেফারেল কোড</label>
-   <input id="refcode" value="EARNBD-DEMO" maxlength="30">
-   <label>শেয়ার করার লিংক</label>
-   <div class="copyrow"><input id="reflink" readonly><button class="btn" id="copybtn">কপি</button></div>
-   <p id="copymsg" class="muted small" aria-live="polite"></p>
-  </section>
-  <section class="card span6" id="about"><h2>আমাদের সম্পর্কে</h2><p class="muted">EarnBD Ads একটি প্রাথমিক তথ্যভিত্তিক ওয়েবসাইট ডেমো। এখানে প্রযুক্তি, অনলাইন শিক্ষা ও ডিজিটাল নিরাপত্তা বিষয়ে মৌলিক কনটেন্ট প্রকাশের পরিকল্পনা রয়েছে।</p></section>
-  <section class="card span6" id="contact"><h2>যোগাযোগ</h2><p class="muted">প্রকাশের আগে এখানে নিজের কার্যকর যোগাযোগের ইমেইল ও ব্যবসায়িক তথ্য যোগ করুন।</p><p class="muted small">ইমেইল: contact@example.com (প্রকাশের আগে পরিবর্তন করুন)</p></section>
- </div>
-</main>
-<footer><div class="wrap"><b>EarnBD Ads</b><p>© 2026 EarnBD Ads. All rights reserved.</p><p>Privacy Policy • Terms & Conditions • Contact</p><p class="small">বিজ্ঞাপন থেকে আয় নিশ্চিত নয়। নিজের বিজ্ঞাপনে ক্লিক বা কৃত্রিম ট্রাফিক তৈরি করবেন না।</p></div></footer>
+<header><div class="top"><div class="brand">EarnBD <span>Ads</span></div><small>সদস্য পোর্টাল</small></div></header>
+<div class="wrap">
+<section class="hero"><h1>আপনার EarnBD অ্যাকাউন্ট</h1><p>এক জায়গা থেকে প্রোফাইল, ওয়ালেটের সারাংশ এবং রেফারেল লিংক দেখুন।</p></section>
+<section id="auth" class="auth">
+<h2>সদস্য অ্যাকাউন্ট</h2><p class="muted">নতুন সদস্য হলে সাইন আপ করুন, আগে অ্যাকাউন্ট থাকলে লগইন করুন।</p>
+<div class="tabs"><button id="signupTab" class="secondary">সাইন আপ</button><button id="loginTab" class="secondary">লগইন</button></div>
+<div id="signup"><label>আপনার নাম</label><input id="name" placeholder="নাম লিখুন"><label>ইমেইল</label><input id="suEmail" type="email" placeholder="ইমেইল ঠিকানা"><label>পাসওয়ার্ড (কমপক্ষে ৬ অক্ষর)</label><input id="suPass" type="password" placeholder="পাসওয়ার্ড"><button id="create" class="full">অ্যাকাউন্ট তৈরি করুন</button></div>
+<div id="loginForm" class="hidden"><label>ইমেইল</label><input id="liEmail" type="email" placeholder="ইমেইল ঠিকানা"><label>পাসওয়ার্ড</label><input id="liPass" type="password" placeholder="পাসওয়ার্ড"><button id="enter" class="full">লগইন করুন</button></div><div id="status" class="status">Supabase সংযোগের জন্য প্রস্তুত।</div>
+</section>
+<section id="app" class="layout hidden">
+<aside class="side">
+<button class="navbtn active" data-page="home">🏠 ড্যাশবোর্ড</button>
+<button class="navbtn" data-page="profile">👤 আমার প্রোফাইল</button>
+<button class="navbtn" data-page="wallet">💳 ওয়ালেট</button>
+<button class="navbtn" data-page="referral">🔗 রেফারেল লিংক</button>
+<button class="navbtn" data-page="help">ℹ️ নিয়ম ও সহায়তা</button>
+<button id="logout" class="navbtn danger">লগআউট</button>
+</aside>
+<main class="panel">
+<section id="page-home"><h2>ড্যাশবোর্ড</h2><p class="muted">স্বাগতম, <b id="welcomeName">সদস্য</b>। আপনার অ্যাকাউন্টের সংক্ষিপ্ত অবস্থা এখানে।</p>
+<div class="tiles"><div class="tile"><small>অ্যাকাউন্ট</small><strong>সক্রিয়</strong></div><div class="tile"><small>ওয়ালেট ব্যালেন্স</small><strong>৳০.০০</strong></div><div class="tile"><small>রেফারেল কোড</small><strong id="miniRef">—</strong></div></div><p class="muted">বাম পাশের মেনু থেকে প্রোফাইল, ওয়ালেট ও রেফারেল পেজ খুলুন।</p></section>
+<section id="page-profile" class="hidden"><h2>আমার প্রোফাইল</h2><p class="muted">আপনার অ্যাকাউন্টের তথ্য।</p><label>নাম</label><div id="profileName" class="code"></div><label>ইমেইল</label><div id="profileEmail" class="code"></div><label>সদস্য আইডি</label><div id="profileId" class="code"></div></section>
+<section id="page-wallet" class="hidden"><h2>আমার ওয়ালেট</h2><p class="muted">আপনার ওয়ালেটের প্রাথমিক স্ক্রিন।</p><div class="tiles"><div class="tile"><small>মোট ব্যালেন্স</small><strong>৳০.০০</strong></div><div class="tile"><small>পেন্ডিং</small><strong>৳০.০০</strong></div><div class="tile"><small>উত্তোলন</small><strong>পরে</strong></div></div><div class="notice">এই মুহূর্তে ওয়ালেটটি শুধু প্রদর্শনের জন্য। কোনো টাকা জমা, আয় গণনা, লেনদেন বা উত্তোলন চালু নেই। বাস্তব টাকা দেখানোর আগে সার্ভার-সাইড লেনদেন ও নিরাপত্তা ব্যবস্থা তৈরি করতে হবে।</div></section>
+<section id="page-referral" class="hidden"><h2>আমার রেফারেল</h2><p class="muted">আপনার ব্যক্তিগত কোড ও লিংক শেয়ার করতে পারবেন।</p><label>রেফারেল কোড</label><div id="refCode" class="code"></div><label>রেফারেল লিংক</label><div id="refLink" class="code"></div><button id="copyRef" class="full">লিংক কপি করুন</button><div class="notice">রেফারেল লিংক দিয়ে নতুন সদস্য এলে তার রেজিস্ট্রেশনের সঙ্গে রেফারেল কোড সংরক্ষিত হবে। এতে কোনো কমিশন বা আয় স্বয়ংক্রিয়ভাবে তৈরি হয় না।</div></section>
+<section id="page-help" class="hidden"><h2>নিয়ম ও সহায়তা</h2><p class="muted">EarnBD Ads-এর প্রাথমিক সংস্করণে সাইন আপ, লগইন, প্রোফাইল ও রেফারেল তথ্য রয়েছে। ওয়ালেট এখনো ডেমো সারাংশ। বৈধ আয়ের উৎস ও পেমেন্ট ব্যবস্থা যাচাই না হওয়া পর্যন্ত কোনো আয় বা পেমেন্টের প্রতিশ্রুতি নেই। বিজ্ঞাপনে ক্লিক বা ভিউয়ের বিনিময়ে সদস্যকে পুরস্কার দেওয়া যাবে না।</p></section>
+</main></section>
+<div class="notice">নিরাপত্তা: Supabase Project URL ও Publishable Key ছাড়া অন্য কোনো Secret/Service Role Key ওয়েবপেজে দেবেন না।</div>
+</div><footer>© EarnBD Ads · প্রাথমিক সদস্য পোর্টাল</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-const params = new URLSearchParams(location.search);
-const incoming = params.get('ref');
-if(incoming && /^[a-zA-Z0-9_-]{3,30}$/.test(incoming)){
-  document.title = 'EarnBD Ads | Referral';
-  const note = document.createElement('p');
-  note.className='muted small';
-  note.textContent='আপনি একটি রেফারেল লিংক থেকে এসেছেন: '+incoming;
-  document.querySelector('#referral').prepend(note);
-}
-const code = document.getElementById('refcode');
-const link = document.getElementById('reflink');
-function updateLink(){link.value=location.origin+location.pathname+'?ref='+encodeURIComponent(code.value.trim()||'EARNBD-DEMO')}
-code.addEventListener('input',updateLink); updateLink();
-document.getElementById('copybtn').addEventListener('click',async()=>{
- try{await navigator.clipboard.writeText(link.value);document.getElementById('copymsg').textContent='লিংক কপি হয়েছে।'}
- catch(e){link.select();document.getElementById('copymsg').textContent='লিংকটি নির্বাচন করা হয়েছে; কপি করুন।'}
-});
-</script>
-</body>
-</html>
+const SUPABASE_URL="PASTE_PROJECT_URL_HERE";
+const SUPABASE_PUBLISHABLE_KEY="PASTE_PUBLISHABLE_KEY_HERE";
+const $=id=>document.getElementById(id),say=m=>$("status").textContent=m;let sb=null,currentUser=null;
+const refIn=new URLSearchParams(location.search).get("ref")||"";
+function authMode(m){$("signup").classList.toggle("hidden",m!=="signup");$("loginForm").classList.toggle("hidden",m!=="login")}
+$("signupTab").onclick=()=>authMode("signup");$("loginTab").onclick=()=>authMode("login");
+function showPage(p){["home","profile","wallet","referral","help"].forEach(x=>$("page-"+x).classList.toggle("hidden",x!==p));document.querySelectorAll(".navbtn[data-page]").forEach(b=>b.classList.toggle("active",b.dataset.page===p))}
+document.querySelectorAll(".navbtn[data-page]").forEach(b=>b.onclick=()=>showPage(b.dataset.page));
+async function loadUser(user){currentUser=user;$("auth").classList.add("hidden");$("app").classList.remove("hidden");const meta=user.user_metadata||{};const name=meta.display_name||"সদস্য";$("welcomeName").textContent=name;$("profileName").textContent=name;$("profileEmail").textContent=user.email||"";$("profileId").textContent=user.id;
+const {data,error}=await sb.from("profiles").select("referral_code,display_name").eq("id",user.id).single();
+if(error){showPage("profile");alert("প্রোফাইল পাওয়া যায়নি। Supabase profiles table/trigger/RLS পরীক্ষা করতে হবে।");return}
+const code=data.referral_code||"";$("refCode").textContent=code;$("miniRef").textContent=code;$("profileName").textContent=data.display_name||name;
+const u=new URL(location.href);u.search="";u.hash="";u.searchParams.set("ref",code);$("refLink").textContent=u.toString();$("copyRef").onclick=async()=>{try{await navigator.clipboard.writeText(u.toString());alert("রেফারেল লিংক কপি হয়েছে।")}catch{alert("লিংকটি হাতে কপি করুন: "+u.toString())}};showPage("home")}
+$("create").onclick=async()=>{const name=$("name").value.trim(),email=$("suEmail").value.trim(),password=$("suPass").value;if(!name||!email||password.length<6)return say("নাম, সঠিক ইমেইল এবং কমপক্ষে ৬ অক্ষরের পাসওয়ার্ড দিন।");say("অ্যাকাউন্ট তৈরি হচ্ছে…");const {data,error}=await sb.auth.signUp({email,password,options:{data:{display_name:name,referral_code:refIn}}});if(error)return say("সাইন আপ হয়নি: "+error.message);if(data.session)await loadUser(data.user);else say("সাইন আপ সফল। ইমেইলে confirmation link এলে সেটিতে চাপুন, তারপর লগইন করুন।")};
+$("enter").onclick=async()=>{const email=$("liEmail").value.trim(),password=$("liPass").value;if(!email||!password)return say("ইমেইল ও পাসওয়ার্ড দিন।");say("লগইন হচ্ছে…");const {data,error}=await sb.auth.signInWithPassword({email,password});if(error)return say("লগইন হয়নি: "+error.message);await loadUser(data.user)};
+$("logout").onclick=async()=>{await sb.auth.signOut();currentUser=null;$("app").classList.add("hidden");$("auth").classList.remove("hidden");say("লগআউট হয়েছে।")};
+if(!window.supabase)say("ইন্টারনেট সংযোগ পরীক্ষা করুন।");else if(SUPABASE_URL.includes("PASTE_")||SUPABASE_PUBLISHABLE_KEY.includes("PASTE_")){say("প্রথমে SUPABASE_URL ও SUPABASE_PUBLISHABLE_KEY-তে Project URL ও Publishable Key বসান।");$("create").disabled=true;$("enter").disabled=true}else{sb=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);sb.auth.getSession().then(({data})=>{if(data.session)loadUser(data.session.user);else say("সাইন আপ অথবা লগইন করুন।")})}
+</script></body></html>
